@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  x-ui:
+    image: sola97/x-ui:latest
+    container_name: x-ui
+    volumes:
+      - ./bin:/usr/local/x-ui/bin #save x-ui/bin/config.json
+      - ./v2-ui.db:/etc/v2-ui/v2-ui.db #migrate v2_ui
+    restart: always
+    network_mode: host
+    
