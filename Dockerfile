@@ -4,7 +4,7 @@ COPY x-ui.sh /usr/local/x-ui.sh
 RUN apk update && \
     apk add --no-cache tzdata runit && \
     mkdir /lib64 && ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2 && \
-    wget -q https://github.com/sprov065/x-ui/releases/download/0.3.1/x-ui-linux-amd64.tar.gz && \
+    wget -q https://github.com/vaxilu/x-ui/releases/download/0.3.2/x-ui-linux-amd64.tar.gz && \
     tar -zxvf x-ui-linux-amd64.tar.gz && \
     rm x-ui-linux-amd64.tar.gz && \
     mv x-ui.sh x-ui/x-ui.sh && \
